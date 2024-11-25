@@ -1,0 +1,27 @@
+<section class="bg-white dark:bg-gray-900">
+  <div
+    class="items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+  >
+    <app-pie class="w-full hidden dark:block"></app-pie>
+    <div class="mt-4 md:mt-0">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        Distribuición de Tráfico por Protocolo.
+      </h2>
+      <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
+        El análisis de la distribución por protocolos muestra que "QUIC"
+        domina el tráfico (70.5%), lo cual es típico de servicios modernos como
+        Google y YouTube que priorizan velocidad y seguridad. **TCP** (16.4%)
+        sigue siendo relevante, mientras que **TLS (1.3 y 1.2)** representa el
+        10.6%, indicando un uso significativo de conexiones cifradas. El **DNS**
+        (1%) y el **OCSP** (0.27%) están en niveles normales, esenciales para
+        resoluciones y validaciones. La baja presencia de **HTTP** (0.02%)
+        sugiere que la red prioriza seguridad mediante HTTPS. En general, los
+        datos reflejan una red moderna, aunque debe revisarse el tráfico DNS y
+        HTTP por posibles anomalías o riesgos.
+      </p>
+      <app-list-pie></app-list-pie>
+    </div>
+  </div>
+</section>
