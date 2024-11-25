@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import ApexCharts from 'apexcharts';
 import { RestService } from '../../../services/rest.service';
+import { style } from '@angular/animations';
 @Component({
   selector: 'app-bar',
   imports: [],
@@ -29,57 +30,119 @@ export class BarComponent implements OnInit {
     const promedioData = series.map((item: any) => parseFloat(item.promedio)); // Valores promedio
     const desviacionData = series.map((item: any) => parseFloat(item.desviacion_estandar)); // Valores desviación estándar
 
-    // Configuración del gráfico
     const options = {
       series: [
         {
-          name: 'Promedio',
-          data: promedioData
+          name: "Promedio",
+          color: "#31C48D",
+          data: promedioData,
         },
         {
-          name: 'Desviación Estándar',
-          data: desviacionData
+          name: "Desviación Estándar",
+          data: desviacionData,
+          color: "#F05252",
         }
       ],
       chart: {
-        type: 'bar',
-        height: 350,
-        stacked: true // Habilitar barras apiladas
-      },
-      plotOptions: {
-        bar: {
-          horizontal: true, // Barras horizontales
-        }
-      },
-      xaxis: {
-        categories: categories, // Categorías para los protocolos
-        title: {
-          text: 'Valores'
-        }
-      },
-      yaxis: {
-        title: {
-          text: 'Protocolos'
-        }
-      },
-      tooltip: {
-        y: {
-          formatter: function (val: any) {
-            return val.toFixed(2); // Mostrar con dos decimales
-          }
+        sparkline: {
+          enabled: false,
+        },
+        type: "bar",
+        stacked: true,
+        width: "100%",
+        height: 400,
+        toolbar: {
+          show: false,
         }
       },
       fill: {
-        opacity: 1
+        opacity: 1,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          columnWidth: "100%",
+          borderRadiusApplication: "end",
+          borderRadius: 6,
+          dataLabels: {
+            position: "top",
+          },
+        },
       },
       legend: {
-        position: 'top',
-        horizontalAlign: 'center',
-        offsetX: 40
-      }
+        show: true,
+        position: "bottom",
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        formatter: function (value:any) {
+          return "$" + value
+        }
+      },
+      xaxis: {
+        labels: {
+          show: true,
+          style: {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+          },
+          //Formato de los labels en ms
+          formatter: function(value: any) {
+            return value + 'ms';
+          }
+          
+        },
+        categories: categories,
+        title: {
+          text : "Valores",
+          style : {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xl font-normal fill-gray-500 dark:fill-gray-400'
+          }
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+      yaxis: {
+        labels: {
+          show: true,
+          style: {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+          },
+          
+        },
+        title: {
+          text : "Protocolos",
+          style : {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xl font-normal fill-gray-500 dark:fill-gray-400'
+          }
+        },
+      },
+      grid: {
+        show: true,
+        strokeDashArray: 4,
+        padding: {
+          left: 2,
+          right: 2,
+          top: -20
+        },
+      },
+      
     };
 
-    const chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
+    if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
+      const chart = new ApexCharts(document.getElementById("bar-chart"), options);
+      chart.render();
+    }
   }
 }
