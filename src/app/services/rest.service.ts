@@ -28,4 +28,12 @@ export class RestService {
   getPromedioandDesviacion() {
     return this.http.get<any>(`${this.baseUrl}promedio_desviacion`);
   }
+
+  getTotalDatosTraficoRed(){
+    return this.http.get<any>(`${this.baseUrl}total_datos`);
+  }
+
+  getPorcentajeProtocolos(){
+    return this.http.get<any>(`${this.baseUrl}porcentaje_protocolo`);
+  }
 }

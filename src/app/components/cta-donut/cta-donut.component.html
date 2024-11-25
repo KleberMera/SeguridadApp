@@ -1,0 +1,38 @@
+<section class="bg-white dark:bg-gray-900">
+  <div
+    class="items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+  >
+    <app-donut class="w-full hidden dark:block"></app-donut>
+    <div class="mt-4 md:mt-0">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white text-center"
+        >
+          Top IPs que generan mayor volumen de datos
+        </h2>
+        <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400 leading-relaxed">
+          El análisis de los porcentajes de tráfico por protocolo refleja lo siguiente:
+        </p>
+        <ul class="list-disc pl-6 text-gray-500 dark:text-gray-400 md:text-lg">
+          <li>
+            <strong>Predominio de QUIC:</strong> Con el <strong>71.15%</strong>, el protocolo <strong>QUIC</strong> domina el tráfico, indicando su creciente adopción por su eficiencia y capacidad para mejorar el rendimiento de las conexiones en la web.
+          </li>
+          <li>
+            <strong>Importancia de TCP:</strong> Representa el <strong>16.54%</strong> del tráfico, destacando su papel como base para otros protocolos, aunque muestra menor participación debido a la transición hacia protocolos más modernos.
+          </li>
+          <li>
+            <strong>TLSv1.3 y TLSv1.2:</strong> En conjunto suman el <strong>10.97%</strong>, lo que resalta el uso de conexiones seguras. TLSv1.3 tiene mayor adopción (<strong>8.55%</strong>) debido a sus mejoras en rendimiento y seguridad.
+          </li>
+          <li>
+            <strong>Protocolos de soporte (DNS, OCSP, HTTP):</strong> Aunque tienen menores porcentajes (1.05%, 0.28%, y 0.02%, respectivamente), su presencia es crucial para operaciones auxiliares como resolución de nombres y validación de certificados.
+          </li>
+        </ul>
+        <p class="mt-4 font-medium text-gray-900 dark:text-white md:text-lg">
+          <strong>Conclusión:</strong> QUIC y los protocolos de seguridad como TLS son protagonistas en la red moderna, mientras que protocolos como HTTP reflejan un uso residual frente a tecnologías más avanzadas.
+        </p>
+        <div class="mt-6">
+          <app-list-donut></app-list-donut>
+        </div>
+      </div>
+      
+  </div>
+</section>
