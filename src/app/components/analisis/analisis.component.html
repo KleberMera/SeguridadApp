@@ -1,0 +1,122 @@
+<body class="bg-gray-100 dark:bg-gray-900 p-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-white mb-4">Resumen General del Análisis de Red</h1>
+            <p class="text-2xl text-gray-600">Análisis exhaustivo del tráfico de red y sus componentes</p>
+        </div>
+
+        <!-- Análisis General del Tráfico -->
+        <div class="bg-white dark:bg-gray-900">
+            <div class="mb-8 p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="p-2 bg-blue-100 rounded-lg">
+                        <svg class="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h2 class="ml-3 text-2xl font-bold text-white">Análisis General del Tráfico</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <p class="text-xl font-bold text-gray-900">57,984</p>
+                        <p class="text-sm text-gray-600">Total de paquetes capturados</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <p class="text-xl font-bold text-blue-600">71.15%</p>
+                        <p class="text-sm text-gray-600">Tráfico QUIC</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <p class="text-xl font-bold text-green-600">16.54%</p>
+                        <p class="text-sm text-gray-600">Tráfico TCP</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Interacciones IP -->
+            <div class="mb-8 p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="p-2 bg-green-100 rounded-lg">
+                        <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h2 class="ml-3 text-2xl font-bold text-white">Interacciones entre IPs</h2>
+                </div>
+                <div class="overflow-x-auto bg-white dark:bg-gray-90">
+                    <table class="w-full text-sm text-left bg-white dark:bg-gray-900">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">IP Origen</th>
+                                <th scope="col" class="px-6 py-3">Interacciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium text-gray-900">200.125.225.209</td>
+                                <td class="px-6 py-4">9,469</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium text-gray-900">57.144.114.128</td>
+                                <td class="px-6 py-4">7,322</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="px-6 py-4 font-medium text-gray-900">181.113.160.76</td>
+                                <td class="px-6 py-4">6,146</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <!-- Estadísticas de Protocolos -->
+            <div class="mb-8 p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="p-2 bg-yellow-100 rounded-lg">
+                        <svg class="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h2 class="ml-3 text-2xl font-bold text-white">Estadísticas por Protocolo</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h3 class="font-semibold text-gray-900">TLSv1.2</h3>
+                        <p class="text-lg font-bold">11,799 ms</p>
+                        <p class="text-sm text-gray-600">Tiempo promedio más alto</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h3 class="font-semibold text-gray-900">QUIC</h3>
+                        <p class="text-lg font-bold">1,007 ms</p>
+                        <p class="text-sm text-gray-600">Balance entre velocidad y eficiencia</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Conclusiones -->
+            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="p-2 bg-purple-100 rounded-lg">
+                        <svg class="w-6 h-6 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h2 class="ml-3 text-2xl font-bold text-white">Conclusiones Finales</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-700">Dominancia de protocolos modernos como QUIC y TLS, reflejando tendencias hacia conexiones más rápidas y seguras.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-700">Nodo central (10.0.2.15) actuando como receptor principal del tráfico.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-700">Base sólida para auditorías de seguridad y optimización del rendimiento en redes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>

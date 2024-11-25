@@ -9,10 +9,6 @@ export class RestService {
   private readonly http = inject(HttpClient);
   public baseUrl = environment.urlBase;
 
-  getAllTrafics() {
-    return this.http.get<any>(`${this.baseUrl}trafico`);
-  }
-
   getPaquetesTraficoRed() {
     return this.http.get<any>(`${this.baseUrl}paquetes`);
   }
@@ -29,11 +25,11 @@ export class RestService {
     return this.http.get<any>(`${this.baseUrl}promedio_desviacion`);
   }
 
-  getTotalDatosTraficoRed(){
-    return this.http.get<any>(`${this.baseUrl}total_datos`);
+  getPorcentajeProtocolos() {
+    return this.http.get<any>(`${this.baseUrl}porcentaje_protocolo`);
   }
 
-  getPorcentajeProtocolos(){
-    return this.http.get<any>(`${this.baseUrl}porcentaje_protocolo`);
+  getInteraccionesTraficoRed() {
+    return this.http.get<any>(`${this.baseUrl}interacciones`);
   }
 }

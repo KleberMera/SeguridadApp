@@ -1,22 +1,33 @@
 <section class="bg-white dark:bg-gray-900">
-  <div
-    class="items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
-  >
+  <div class="items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
     <app-bar class="w-full hidden dark:block"></app-bar>
+    
     <div class="mt-4 md:mt-0">
-      <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-      >
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
         Promedio y Desviación Estándar del tamaño de los paquetes por protocolo
       </h2>
-      <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-        El análisis muestra que **DNS (123 ms)** y **TCP (304 ms)** son los
-        protocolos más rápidos y consistentes, esenciales para operaciones
-        frecuentes. Por otro lado, **TLSv1.2 (11,799 ms)** y **TLSv1.3 (4,129
-        ms)** tienen los tiempos más altos, reflejando la complejidad de las
-        conexiones seguras, pero con gran variabilidad. Esto evidencia el
-        equilibrio entre velocidad y seguridad en la red.
-      </p>
+      
+      <div class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400 space-y-4">
+        <p>
+          El análisis muestra que 
+          <span class="font-medium text-blue-600 dark:text-blue-400">DNS (123 ms)</span> 
+          y 
+          <span class="font-medium text-blue-600 dark:text-blue-400">TCP (304 ms)</span> 
+          son los protocolos más rápidos y consistentes, esenciales para operaciones frecuentes.
+        </p>
+        
+        <p>
+          Por otro lado, 
+          <span class="font-medium text-amber-600 dark:text-amber-400">TLSv1.2 (11,799 ms)</span> 
+          y 
+          <span class="font-medium text-amber-600 dark:text-amber-400">TLSv1.3 (4,129 ms)</span> 
+          tienen los tiempos más altos, reflejando la complejidad de las conexiones seguras, pero con gran variabilidad.
+        </p>
+        
+        <p class="font-medium">
+          Esto evidencia el equilibrio entre velocidad y seguridad en la red.
+        </p>
+      </div>
     </div>
   </div>
 </section>
