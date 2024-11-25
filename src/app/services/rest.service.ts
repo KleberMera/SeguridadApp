@@ -28,5 +28,9 @@ export class RestService {
     return this.http.get<any>( `${this.baseUrl}origen`);
   }
 
+  getPromedioandDesviacion() {
+    return this.http.get<any>( `${this.baseUrl}promedio_desviacion`);
+  }
+
 
 }
