@@ -61,7 +61,7 @@ export class LineComponent implements OnInit {
 
     const options = {
       chart: {
-        height: 350,
+        height: 450,
         type: 'line',
         fontFamily: 'Inter, sans-serif',
         toolbar: {
@@ -69,13 +69,17 @@ export class LineComponent implements OnInit {
         },
         zoom: {
           enabled: true
-        }
+        },
+        sparkline: {
+          enabled: false,
+        },
       },
       series: [{
         name: 'Total Packets',
+        color: "#31C48D",
         data: formattedData
       }],
-      colors: ['#4287f5'],
+     
       dataLabels: {
         enabled: false
       },
@@ -98,7 +102,8 @@ export class LineComponent implements OnInit {
         labels: {
           rotate: -45,
           style: {
-            fontSize: '12px',
+            fontSize: '15px',
+             cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400',
             fontFamily: 'Inter, sans-serif'
           }
         },
@@ -111,6 +116,11 @@ export class LineComponent implements OnInit {
       },
       yaxis: {
         labels: {
+          style: {
+            fontSize: '15px',
+             cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400',
+            fontFamily: 'Inter, sans-serif'
+          },
           formatter: function(value: number) {
             return value.toLocaleString();
           }

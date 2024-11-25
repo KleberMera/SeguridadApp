@@ -50,7 +50,7 @@ export class BarComponent implements OnInit {
         type: "bar",
         stacked: true,
         width: "100%",
-        height: 400,
+        height: 450,
         toolbar: {
           show: false,
         }
