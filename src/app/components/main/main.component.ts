@@ -13,14 +13,13 @@ import { AnalisisComponent } from '../analisis/analisis.component';
 @Component({
   selector: 'app-main',
   imports: [
-   
     CtaComponent,
     CtaLineComponent,
     CtaBarComponent,
     CtaDonutComponent,
     CtaVerticalComponent,
     DataComponent,
-    
+    PaquetsComponent
 ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
