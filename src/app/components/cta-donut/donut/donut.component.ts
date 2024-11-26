@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import ApexCharts from 'apexcharts';
 import { RestService } from '../../../services/rest.service';
+import { JsonService } from '../../../services/json.service';
 @Component({
   selector: 'app-donut',
   imports: [],
@@ -9,12 +10,13 @@ import { RestService } from '../../../services/rest.service';
 })
 export class DonutComponent implements OnInit {
   public readonly restService = inject(RestService);
+  public readonly jsonService = inject(JsonService);
   ngOnInit(): void {
     this.getPorcentajeProtocolos();
   }
   async getPorcentajeProtocolos() {
     try {
-      const res = await this.restService.getPorcentajeProtocolos().toPromise();
+      const res = await this.jsonService.getPorcentajeProtocolos().toPromise();
       console.log(res);
       this.grafics(res);
     } catch (error) {}

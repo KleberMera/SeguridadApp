@@ -1,0 +1,37 @@
+[
+    {
+        "protocol": "DNS",
+        "promedio": "123.4505",
+        "desviacion_estandar": 53.3963
+    },
+    {
+        "protocol": "HTTP",
+        "promedio": "486.6923",
+        "desviacion_estandar": 554.1769
+    },
+    {
+        "protocol": "OCSP",
+        "promedio": "658.9568",
+        "desviacion_estandar": 196.6169
+    },
+    {
+        "protocol": "QUIC",
+        "promedio": "1007.9298",
+        "desviacion_estandar": 523.0495
+    },
+    {
+        "protocol": "TCP",
+        "promedio": "304.1731",
+        "desviacion_estandar": 1146.0223
+    },
+    {
+        "protocol": "TLSv1.2",
+        "promedio": "11799.7952",
+        "desviacion_estandar": 14688.4855
+    },
+    {
+        "protocol": "TLSv1.3",
+        "promedio": "4129.1467",
+        "desviacion_estandar": 10295.6175
+    }
+]

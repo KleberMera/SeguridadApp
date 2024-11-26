@@ -1,0 +1,30 @@
+[
+    {
+        "protocol": "QUIC",
+        "porcentaje": "71.14721"
+    },
+    {
+        "protocol": "TCP",
+        "porcentaje": "16.53560"
+    },
+    {
+        "protocol": "TLSv1.3",
+        "porcentaje": "8.54546"
+    },
+    {
+        "protocol": "TLSv1.2",
+        "porcentaje": "2.42481"
+    },
+    {
+        "protocol": "DNS",
+        "porcentaje": "1.04512"
+    },
+    {
+        "protocol": "OCSP",
+        "porcentaje": "0.27939"
+    },
+    {
+        "protocol": "HTTP",
+        "porcentaje": "0.02242"
+    }
+]

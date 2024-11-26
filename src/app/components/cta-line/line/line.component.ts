@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import ApexCharts from 'apexcharts';
 import { RestService } from '../../../services/rest.service';
 import { CommonModule } from '@angular/common';
+import { JsonService } from '../../../services/json.service';
 
 
 interface NetworkData {
@@ -18,6 +19,7 @@ interface NetworkData {
 })
 export class LineComponent implements OnInit {
   public readonly restService = inject(RestService);
+  public readonly jsonService = inject(JsonService);
   networkData: any[] = [];
   private chart: ApexCharts | null = null;
 
@@ -33,10 +35,9 @@ export class LineComponent implements OnInit {
 
   async getAnalisisOrigenTraficoRed() {
     try {
-      const res = await this.restService.getAnalisisOrigenTraficoRed().toPromise();
+      const res = await this.jsonService.getAnalisisOrigenTraficoRed().toPromise();
       this.networkData = res;
       this.initializeChart(res);
-      console.log('Datos recibidos:', res);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -137,7 +138,6 @@ export class LineComponent implements OnInit {
 
     const chartElement = document.querySelector('#line-chart');
     if (chartElement) {
-      console.log('Inicializando gráfico con opciones:', options);
       this.chart = new ApexCharts(chartElement, options);
       this.chart.render();
     } else {

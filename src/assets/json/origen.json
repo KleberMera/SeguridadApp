@@ -1,0 +1,62 @@
+[
+    {
+        "source": "10.0.2.15",
+        "primer_paquete": "0.000000",
+        "ultimo_paquete": "427.908895",
+        "total": 16222
+    },
+    {
+        "source": "200.125.225.209",
+        "primer_paquete": "257.216721",
+        "ultimo_paquete": "426.779070",
+        "total": 9469
+    },
+    {
+        "source": "57.144.114.128",
+        "primer_paquete": "236.155333",
+        "ultimo_paquete": "414.848561",
+        "total": 7322
+    },
+    {
+        "source": "181.113.160.76",
+        "primer_paquete": "312.439968",
+        "ultimo_paquete": "427.908879",
+        "total": 6146
+    },
+    {
+        "source": "57.144.114.1",
+        "primer_paquete": "235.508098",
+        "ultimo_paquete": "426.625010",
+        "total": 3421
+    },
+    {
+        "source": "142.250.78.100",
+        "primer_paquete": "10.994687",
+        "ultimo_paquete": "416.001472",
+        "total": 2334
+    },
+    {
+        "source": "142.250.78.110",
+        "primer_paquete": "52.365789",
+        "ultimo_paquete": "419.035644",
+        "total": 2250
+    },
+    {
+        "source": "163.70.152.19",
+        "primer_paquete": "391.564417",
+        "ultimo_paquete": "426.895543",
+        "total": 1125
+    },
+    {
+        "source": "186.3.46.173",
+        "primer_paquete": "56.887111",
+        "ultimo_paquete": "309.560375",
+        "total": 1001
+    },
+    {
+        "source": "142.250.218.131",
+        "primer_paquete": "13.392699",
+        "ultimo_paquete": "419.035644",
+        "total": 997
+    }
+]

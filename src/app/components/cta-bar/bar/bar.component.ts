@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import ApexCharts from 'apexcharts';
 import { RestService } from '../../../services/rest.service';
 import { style } from '@angular/animations';
+import { JsonService } from '../../../services/json.service';
 @Component({
   selector: 'app-bar',
   imports: [],
@@ -10,6 +11,7 @@ import { style } from '@angular/animations';
 })
 export class BarComponent implements OnInit {
   public readonly restService = inject(RestService);
+  public readonly jsonService = inject(JsonService);
 
   ngOnInit(): void {
     this.getPromedioandDesviacion();
@@ -17,7 +19,7 @@ export class BarComponent implements OnInit {
 
   async getPromedioandDesviacion() {
     try {
-      const res = await this.restService.getPromedioandDesviacion().toPromise();
+      const res = await this.jsonService.getPromedioandDesviacion().toPromise();
       this.grafics(res);
     } catch (error) {
       console.error('Error fetching data:', error);
