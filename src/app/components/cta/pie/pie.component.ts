@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import ApexCharts from 'apexcharts';
 import { RestService } from '../../../services/rest.service';
+import { JsonService } from '../../../services/json.service';
 
 @Component({
   selector: 'app-pie',
@@ -10,6 +11,7 @@ import { RestService } from '../../../services/rest.service';
 })
 export class PieComponent implements OnInit {
   private readonly restService = inject(RestService);
+  private readonly jsonService = inject(JsonService);
   public labels = signal<any>([]);
   public series = signal<any>([]);
 
@@ -19,7 +21,7 @@ export class PieComponent implements OnInit {
 
   async getDistribucionTraficoRed() {
     try {
-      const res = await this.restService
+      const res = await this.jsonService
         .getDistribucionTraficoRed()
         .toPromise();
       const resList = res.map((item: any) => item.protocol);
@@ -29,7 +31,6 @@ export class PieComponent implements OnInit {
         const hue = Math.floor(Math.random() * 360);
         return `hsl(${hue}, 100%, 50%)`;
       });
-
       this.grafics(resList, resSeries, colors);
     } catch (error) {}
   }

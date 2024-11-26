@@ -1,0 +1,30 @@
+[
+    {
+        "protocol": "QUIC",
+        "total": 41254
+    },
+    {
+        "protocol": "TCP",
+        "total": 9588
+    },
+    {
+        "protocol": "TLSv1.3",
+        "total": 4955
+    },
+    {
+        "protocol": "TLSv1.2",
+        "total": 1406
+    },
+    {
+        "protocol": "DNS",
+        "total": 606
+    },
+    {
+        "protocol": "OCSP",
+        "total": 162
+    },
+    {
+        "protocol": "HTTP",
+        "total": 13
+    }
+]

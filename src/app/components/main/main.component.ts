@@ -9,6 +9,7 @@ import { CtaDonutComponent } from '../cta-donut/cta-donut.component';
 import { CtaVerticalComponent } from '../cta-vertical/cta-vertical.component';
 import { DataComponent } from '../data/data.component';
 import { AnalisisComponent } from '../analisis/analisis.component';
+import { SectionComponent } from "../section/section.component";
 
 @Component({
   selector: 'app-main',
@@ -19,7 +20,8 @@ import { AnalisisComponent } from '../analisis/analisis.component';
     CtaDonutComponent,
     CtaVerticalComponent,
     DataComponent,
-    PaquetsComponent
+    PaquetsComponent,
+    SectionComponent
 ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
