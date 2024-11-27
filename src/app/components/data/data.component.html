@@ -18,34 +18,29 @@
             </p>
         </div>
 
-        <!-- Análisis por Protocolo -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-            <h3 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">
+        <div class="">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 md:p-6 mb-8">
+              <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">
                 Análisis por Protocolo
-            </h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+              </h3>
+              
+              <p class="text-base text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                 Los protocolos fueron evaluados en términos de tráfico generado, 
                 porcentaje de uso, y desempeño. Los resultados muestran:
-            </p>
-            <ul class="space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center">
+              </p>
+              
+              <ul class="space-y-2 pl-3 md:pl-5 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                @for (protocol of protocols; track protocol.name) {
+                  <li class="flex items-center">
                     <span class="mr-2 text-blue-600 font-bold">•</span>
-                    <strong>QUIC: </strong> Promedio de <strong>1007.93 ms </strong>  por paquete con desviación estándar de <strong>523.05</strong>.
-                </li>
-                <li class="flex items-center">
-                    <span class="mr-2 text-blue-600 font-bold">•</span>
-                    <strong>TCP:</strong> Promedio de <strong>304.17 ms</strong>, siendo la base de múltiples protocolos modernos.
-                </li>
-                <li class="flex items-center">
-                    <span class="mr-2 text-blue-600 font-bold">•</span>
-                    <strong>TLSv1.3:</strong> Uso creciente con un <strong>8.55%</strong>, mejorando la seguridad y el rendimiento.
-                </li>
-                <li class="flex items-center">
-                    <span class="mr-2 text-blue-600 font-bold">•</span>
-                    <strong>HTTP:</strong> Uso residual (<strong>0.02%</strong>), reflejando la transición hacia tecnologías avanzadas.
-                </li>
-            </ul>
-        </div>
+                    <span [innerHTML]="getProtocolDescription(protocol)"></span>
+                  </li>
+                } @empty {
+                  <li class="text-gray-500">No hay protocolos disponibles</li>
+                }
+              </ul>
+            </div>
+          </div>
 
         <!-- Interacciones entre IPs -->
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">

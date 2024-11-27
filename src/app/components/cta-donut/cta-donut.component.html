@@ -1,5 +1,6 @@
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+    <div>
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white text-center">
         Top IPs que generan mayor volumen de datos
       </h2>
@@ -8,15 +9,28 @@
         El análisis de los porcentajes de tráfico por protocolo refleja lo siguiente:
       </p>
       
-      <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
-        <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-          <app-donut class="w-full hidden dark:block"></app-donut>
-        </figure>
-        <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-          <app-list-donut></app-list-donut>
-        </figure>
-      </div>
-  
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 mb-8 lg:mb-12">
+      <figure 
+        class="flex flex-col justify-center items-center p-8 text-center 
+               bg-gray-50 border-b border-gray-200 
+               md:p-12 lg:border-r 
+               dark:bg-gray-800 dark:border-gray-700"
+      >
+        <app-donut 
+          class="w-full hidden dark:block"
+        ></app-donut>
+      </figure>
+
+      <figure 
+        class="flex flex-col justify-center items-center p-8 text-center 
+               bg-gray-50 border-b border-gray-200 
+               md:p-12 
+               dark:bg-gray-800 dark:border-gray-700"
+      >
+        <app-list-donut></app-list-donut>
+      </figure>
+    </div>
       <div class="space-y-6 text-left">
         <div class="flex flex-col gap-4">
           <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
