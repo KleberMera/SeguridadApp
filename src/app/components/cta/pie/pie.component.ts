@@ -24,13 +24,19 @@ export class PieComponent implements OnInit {
       const res = await this.jsonService
         .getDistribucionTraficoRed()
         .toPromise();
+      const colors = [
+        '#1C64F2', // Azul
+        '#16BDCA', // Turquesa
+        '#FDBA8C', // Naranja Claro
+        '#E74694', // Rosa
+        '#3B82F6', // Azul Claro
+        '#8B5CF6', // Púrpura
+        '#F59E0B', // Amarillo
+      ];
+
       const resList = res.map((item: any) => item.protocol);
       const resSeries = res.map((item: any) => item.total);
-      //Generar Colores random por el numero de protocolos
-      const colors = Array.from({ length: resList.length }, () => {
-        const hue = Math.floor(Math.random() * 360);
-        return `hsl(${hue}, 100%, 50%)`;
-      });
+
       this.grafics(resList, resSeries, colors);
     } catch (error) {}
   }

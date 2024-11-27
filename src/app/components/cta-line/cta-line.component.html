@@ -1,27 +1,59 @@
 <section class="bg-white dark:bg-gray-900">
-  <div
-    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
-  >
-    <div class="mt-4 md:mt-0">
-      <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-      >
-        Orígenes Más Frecuentes en el Tráfico de Red
-      </h2>
-      <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-        El análisis de los orígenes más frecuentes muestra que
-        <b class="text-blue-600">10.0.2.15</b> concentra el mayor volumen de
-        tráfico <b class="text-blue-500">(16,222 paquetes)</b>, siendo
-        probablemente el host principal o un dispositivo local. Otros orígenes
-        destacados, como <b class="text-blue-300">200.125.225.209 (9,469 paquetes)</b> y
-        <b class="text-blue-300">57.144.114.128 (7,322 paquetes)</b>, indican actividad externa
-        significativa. La mayoría de los orígenes tienen rangos temporales
-        específicos, con superposiciones que sugieren interacciones simultáneas
-        en la red. Este comportamiento podría ser normal para una red activa,
-        pero destaca la necesidad de monitorear los hosts externos más activos
-        para identificar posibles anomalías.
-      </p>
+  <div class="container mx-auto px-4 py-12 max-w-screen-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Content Column -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white mb-6">
+          Orígenes Más Frecuentes en el Tráfico de Red
+        </h2>
+        
+        <div class="prose dark:prose-invert max-w-none">
+          <div class="space-y-4">
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              El análisis de orígenes revela patrones significativos de tráfico de red:
+
+              <span class="block mt-2 mb-2 bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg border border-blue-100 dark:border-blue-800">
+                <span class="font-bold text-blue-700 dark:text-blue-300 block mb-2">Host Principal</span>
+                <span class="font-bold text-blue-600">10.0.2.15</span> 
+                <span class="text-gray-500 dark:text-gray-400 ml-2">
+                  Concentra <span class="font-bold text-green-600">16,222 paquetes</span>
+                </span>
+              </span>
+            </p>
+            
+            <div class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Orígenes externos destacados:
+              <ul class="list-disc pl-5 space-y-2 mt-2 text-gray-700 dark:text-gray-300">
+                <li>
+                  <span class="font-bold text-blue-500">200.125.225.209</span>
+                  <span class="text-gray-500 dark:text-gray-400 ml-2">
+                    Con <span class="font-bold text-green-600">9,469 paquetes</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="font-bold text-blue-500">57.144.114.128</span>
+                  <span class="text-gray-500 dark:text-gray-400 ml-2">
+                    Con <span class="font-bold text-green-600">7,322 paquetes</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed bg-gray-50 dark:bg-gray-800/30 p-4 rounded-lg border border-gray-100 dark:border-gray-700">
+              <span class="font-bold text-blue-700 dark:text-blue-300 block mb-2">Observaciones Clave</span>
+              La mayoría de los orígenes presentan rangos temporales específicos con 
+              superposiciones, lo que sugiere interacciones simultáneas en la red. 
+              Este comportamiento requiere un monitoreo continuo para identificar 
+              posibles anomalías.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line Chart Column -->
+      <div class="w-full">
+        <app-line class="w-full max-w-md mx-auto"></app-line>
+      </div>
     </div>
-    <app-line></app-line>
   </div>
 </section>
