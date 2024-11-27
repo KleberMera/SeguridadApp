@@ -1,85 +1,142 @@
 <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 items-center">
-      <app-vertical class="w-full max-w-md mx-auto"></app-vertical>
-      
-      <div class="mt-4 md:mt-0">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-          Top de Interacciones Específicas entre Pares (Source-Destination)
-        </h2>
-        
-        <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-          El análisis de las interacciones entre direcciones IP revela:
-        </p>
-  
-        <div class="space-y-6">
-          <!-- Sección de tráfico entrante -->
-          <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
-            <h3 class="text-lg font-bold text-blue-600 dark:text-blue-400 mb-3">
-              Tráfico Entrante hacia 
-              <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">10.0.2.15</code>
-            </h3>
-            
-            <div class="space-y-3">
-              <div class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded">
-                <code class="text-sm">200.125.225.209</code>
-                <span class="font-bold text-blue-600 dark:text-blue-400">9,469 interacciones</span>
-              </div>
-              <div class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded">
-                <code class="text-sm">57.144.114.128</code>
-                <span class="font-bold text-blue-600 dark:text-blue-400">7,322 interacciones</span>
-              </div>
-              <div class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded">
-                <code class="text-sm">181.113.160.76</code>
-                <span class="font-bold text-blue-600 dark:text-blue-400">6,146 interacciones</span>
-              </div>
+  <div class="mb-8 text-center">
+    <div class="space-y-4">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        Top de Interacciones Específicas entre Pares (Source-Destination)
+      </h2>
+
+      <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
+        El análisis de las interacciones entre direcciones IP revela:
+      </p>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto p-6">
+    <app-vertical></app-vertical>
+  </div>
+
+  <div class="bg-gray-50 dark:bg-gray-900">
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+       
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Importance Section -->
+          <div class="h-full">
+             <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h3 class="text-lg font-bold text-blue-600 dark:text-blue-400 mb-3">
+            Tráfico Entrante hacia
+            <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+              >10.0.2.15</code
+            >
+          </h3>
+
+          <div class="space-y-3">
+            <div
+              class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded"
+            >
+              <code class="text-sm">200.125.225.209</code>
+              <span class="font-bold text-blue-600 dark:text-blue-400"
+                >9,469 interacciones</span
+              >
             </div>
-          </div>
-  
-          <!-- Sección de tráfico saliente -->
-          <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
-            <h3 class="text-lg font-bold text-green-600 dark:text-green-400 mb-3">
-              Tráfico Saliente desde 
-              <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">10.0.2.15</code>
-            </h3>
-            
-            <div class="space-y-3">
-              <div class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded">
-                <code class="text-sm">200.125.225.209</code>
-                <span class="font-bold text-green-600 dark:text-green-400">2,192 interacciones</span>
-              </div>
-              <div class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded">
-                <code class="text-sm">57.144.114.128</code>
-                <span class="font-bold text-green-600 dark:text-green-400">1,317 interacciones</span>
-              </div>
-              <div class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded">
-                <code class="text-sm">57.144.114.1</code>
-                <span class="font-bold text-green-600 dark:text-green-400">1,248 interacciones</span>
-              </div>
+            <div
+              class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded"
+            >
+              <code class="text-sm">57.144.114.128</code>
+              <span class="font-bold text-blue-600 dark:text-blue-400"
+                >7,322 interacciones</span
+              >
             </div>
-          </div>
-  
-          <!-- Sección de análisis -->
-          <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800 border-l-4 border-purple-500">
-            <h3 class="text-lg font-bold text-purple-600 dark:text-purple-400 mb-3">
-              Patrón de Tráfico Asimétrico
-            </h3>
-            <p class="text-gray-500 dark:text-gray-400">
-              Se observa una notable asimetría en el tráfico, especialmente con 
-              <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">200.125.225.209</code>, 
-              que genera más de 9,000 interacciones entrantes pero recibe solo 2,000 salientes.
-            </p>
-          </div>
-  
-          <!-- Conclusión -->
-          <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg border-t-2 border-blue-500">
-            <p class="font-medium text-gray-900 dark:text-white">
-              <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">10.0.2.15</code> 
-              actúa como nodo central, sugiriendo un rol de servidor o dispositivo crítico. 
-              El patrón de tráfico indica una arquitectura cliente-servidor clara, donde este 
-              dispositivo funciona como procesador principal de datos en la red.
-            </p>
+            <div
+              class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded"
+            >
+              <code class="text-sm">181.113.160.76</code>
+              <span class="font-bold text-blue-600 dark:text-blue-400"
+                >6,146 interacciones</span
+              >
+            </div>
           </div>
         </div>
+          </div>
+  
+          <!-- Tools Section -->
+          <div class="h-full">
+            <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+              <h3 class="text-lg font-bold text-green-600 dark:text-green-400 mb-3">
+                Tráfico Saliente desde
+                <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+                  >10.0.2.15</code
+                >
+              </h3>
+    
+              <div class="space-y-3">
+                <div
+                  class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded"
+                >
+                  <code class="text-sm">200.125.225.209</code>
+                  <span class="font-bold text-green-600 dark:text-green-400"
+                    >2,192 interacciones</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded"
+                >
+                  <code class="text-sm">57.144.114.128</code>
+                  <span class="font-bold text-green-600 dark:text-green-400"
+                    >1,317 interacciones</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded"
+                >
+                  <code class="text-sm">57.144.114.1</code>
+                  <span class="font-bold text-green-600 dark:text-green-400"
+                    >1,248 interacciones</span
+                  >
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div
+          class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800 border-l-4 border-purple-500"
+        >
+          <h3
+            class="text-lg font-bold text-purple-600 dark:text-purple-400 mb-3"
+          >
+            Patrón de Tráfico Asimétrico
+          </h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Se observa una notable asimetría en el tráfico, especialmente con
+            <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+              >200.125.225.209</code
+            >, que genera más de 9,000 interacciones entrantes pero recibe solo
+            2,000 salientes.
+          </p>
+        </div>
+
+        <!-- Conclusión -->
+        <div
+          class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg border-t-2 border-blue-500"
+        >
+          <p class="font-medium text-gray-900 dark:text-white">
+            <code class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+              >10.0.2.15</code
+            >
+            actúa como nodo central, sugiriendo un rol de servidor o dispositivo
+            crítico. El patrón de tráfico indica una arquitectura
+            cliente-servidor clara, donde este dispositivo funciona como
+            procesador principal de datos en la red.
+          </p>
+        </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+  
+ 
+</section>
